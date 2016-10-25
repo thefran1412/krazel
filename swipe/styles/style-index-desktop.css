@@ -81,6 +81,16 @@ li {
 	text-decoration: none;
 	color: black;
 }
+#pag{
+	text-align: center;
+}
+#menu a:hover{
+	color: #FF872E;
+	transition: color 0.5s ease;
+}
+#menu a{
+	transition: color 0.5s ease;
+}
 @media only screen and (min-width: 1160px) {
 
 
@@ -111,7 +121,7 @@ h1{
 }
 #menu p{
 	display: inline-block;
-	width: 110px; 
+	width: 109px; 
 	letter-spacing: 0px;
 }
 .menuleft p{
@@ -166,6 +176,9 @@ h1{
 	transition: width 0.5s ease;
 	padding-left: 5px;
 	padding-top: 5px; 
+	overflow-y: scroll;
+	overflow-x: none;
+	height: 640px;
 }
 #content{
 	padding-top: 20px;
@@ -198,22 +211,25 @@ h1{
 		height: 350px;
 		margin: 5px 0px;
 		float: none;
+		background-color: white;
 	}
 	.snd-post{
 		width: 350px;
 		height: 170px;
 		margin: 5px 0px;
 		float: none;
+		background-color: white;
 	}
 	.page-post{
 		width: 170px;
 		height: 170px;
-		margin: 5px 0px;
-		margin-right: 5px;
+		margin: 5px 10px 5px 0;
+		background-color: white;
 	}
 	.normal-post{
 		width:200px;
 		height: 200px auto;
+		background-color: white;
 	}
 
     body {
@@ -235,7 +251,7 @@ h1{
 	}
     #everything{
 		max-width: 1000px;
-		min-width: 542px;
+		min-width: 670px;
 		margin: 0 auto;
 		transition: width 0.5s ease;
 
@@ -320,7 +336,7 @@ h1{
 	}
 	#ranking, #content, #categories{
 		display: inline-block;
-		height: 500px;
+		//height: 500px;
 		vertical-align: top;
 		text-align: left;
 	}
@@ -332,13 +348,16 @@ h1{
 		transition: width 0.3s ease;
 		float: left;
 		padding-left: 10px;
+		overflow-y: scroll;
+		overflow-x: none;
+		height: 1110px;
 	}
 	#content{
 		max-width: 732px;
 		transition: width 0.3s ease;
 	}
 	#wrap{
-		width: 350px;
+		width: 370px;
 		margin: 0 auto;
 	}
 	#ranking{
@@ -382,6 +401,7 @@ h1{
 		height: 50px;
 	}
     #everything{
+    	min-width: 542px;
 		width: 500px;
 		transition: width 0.3s ease;
 		margin: 0 auto;
@@ -463,13 +483,11 @@ h1{
 		border: solid grey 1px;
 		margin-top: 10px;
 		width: 540px;
-
-
 	}
 	#ranking, #content, #categories{
 		display: inline-block;
 		border: 0;
-		height: 500px;
+		//height: 500px;
 		margin-top: 10px;
 		vertical-align: top;
 	}
@@ -477,6 +495,9 @@ h1{
 		width: 155px;
 		transition: width 0.3s ease;
 		padding-left: 10px;
+		overflow-y: scroll;
+		overflow-x: none;
+		height: 1110px;
 	}
 	#content{
 		width: 370;
@@ -484,7 +505,7 @@ h1{
 		text-align: center;
 	}
 	#wrap{
-		width: 350px;
+		width: 370px;
 		margin: 0 auto;
 	}
 	.fst-post{

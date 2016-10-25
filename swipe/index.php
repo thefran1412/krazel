@@ -139,7 +139,7 @@ else{
 					</div>
 					<div class="menuleft">
 						<p><a href="index.php">HOME</a></p>
-						<p><a href="#">NEW SQUARE </a></p>
+						<p><a href="new">NEW SQUARE </a></p>
 						<p><a href="#">EVENTS</a></p>
 						<p><a href="#">CONTACT US</a></p>
 					</div>
@@ -168,9 +168,14 @@ else{
 				?>
 			</div>
 			<div id="content">
-			<script type="text/javascript">
-					getPage(1, pages());
-				</script>
+				<div id="pag">
+					<p id="pageinfo">Page # of #</p>
+					<button id="previous" onclick="prvsPage();">Before</button>
+					<button id="next" onclick="nextPage();">Next</button>
+				</div>
+				<div id="cont_square">
+					
+				</div>
 			</div>
 			<div id="ranking">
 				<h2>RANKING</h2>

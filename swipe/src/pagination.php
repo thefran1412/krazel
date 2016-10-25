@@ -7,13 +7,20 @@ $connection->connect();
 
 
 
-if (isset($_POST['page'])) {
-	//$info = pagination($_POST['page'], $_POST['cat'], $connection);
-	printSquares($_POST['page'], $_POST['cat'], $connection);
+if (isset($_POST['page']) && isset($_POST['cat']) && isset($_POST['sq'])) {
+	if($_POST['sq'] == 1){
+		printSquares($_POST['page'], $_POST['cat'], $connection);
+	}
+	else{
+		$info = CountSquares($_POST['cat'], $connection);
+		echo $info;
+	}
 }
 else{
 	//$info = pagination(1, null, $connection);
-	printSquares(1, null, $connection);
+	//printSquares(2, null, 0, $connection);
+	$info = CountSquares(null, $connection);
+		
 }
 
 
@@ -46,7 +53,7 @@ function printSquares($page, $cat_id, $connection){
 				}
 			}
 			else{
-				$style = "normal-post";
+				$style = "page-post";
 			}
 			$ids = $row["ids"];
 			$title = $row["title"];
@@ -88,7 +95,8 @@ function pagination($page, $cat_id = null, $connection){
 		}
 	}
 	else {
-		$offset = ($page-1)*12+7; 
+		$offset = ($page-2)*12+7; 
+
 		if($cat_id == null){
 			$sql = 'SELECT s.id_square as "ids", s.title as "title", s.url as "url", s.image as "img", SUM(p.quantity) as "suma", u.username as "user" FROM squares s, payments p, users u WHERE s.id_square = p.id_square AND s.id_user = u.id_user GROUP BY s.id_square ORDER BY suma desc LIMIT 12 OFFSET '.$offset.';';
 		}
