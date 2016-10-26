@@ -1,5 +1,5 @@
 $(function(){
-	document.getElementById("fileToUpload").onchange = function () {
+	/*document.getElementById("fileToUpload").onchange = function () {
 	   if ($('#fileToUpload').val() == "") {
 	   		$('#complete').show();
 	 		$('.jcrop-holder').hide();
@@ -25,7 +25,7 @@ $(function(){
 	 			$("#complete").html("<h4 style='color: red;'>File format not allowed</h4>");
 	   		}
 	   }
-	};
+	};*/
 
 	$('#myForm').ajaxForm({
 	 	beforeSend:function(){
@@ -98,3 +98,6 @@ function send(){
 		}
 	});
 };
+function popup_img() {
+	alert('popup');
+}

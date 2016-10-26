@@ -2,11 +2,13 @@
 <html>
 	<head>
 		<title>Krazel: new</title>
+
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 		
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script src="http://malsup.github.com/jquery.form.js"></script> 
-		<script src="script.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/popup.js"></script>
 
 		<script src="js/jquery.Jcrop.min.js"></script>
 		<link rel="stylesheet" href="css/jquery.Jcrop.css" type="text/css" />
@@ -48,33 +50,30 @@
 				</div>
 			</div>
 		</div>
+		<div class="poppy" id="popup-1">
+			<h2>Select an image:</h2><br>
+			<input type="file" name="image">
+			<br><br><br><br><hr>
+			<p>Select Image:</p><br><br><br><br><br>
+		</div>
 		<div id="body">
 			<div class="main">
 				<h1>New Square</h1>
 				
-				<form id="myForm" action="upload.php" method="post" enctype="multipart/form-data" novalidate>
 					<h2>Title:</h2>
 					<input type="text" name="title">
 					<h2>Url:</h2>
 					<input type="url" name="url">
 					<h2>Select Image:</h2>
-					<div id="hide">
-						<div class="fileUpload btn btn-primary">
-							<span>Select</span>
-							<input type="file" name="fileToUpload" id="fileToUpload" accept="image/*"  class="upload"/>
-						</div>
-						<input type="number" id="x" name="x" hidden="true">
-						<input type="number" id="y" name="y" hidden="true">
-						<input type="number" id="w" name="w" hidden="true">
-						<input type="number" id="h" name="h" hidden="true">
-						<img id="image" style="width: 100%;">
-						<input type="submit" value="Create Square" class="btn btn-success" disabled="true" style="width: 100%; margin-top: 10px;">
-					</div>
-					<div id="complete" hidden="true">
-						<h3>Complete!</h3>
-					</div>
+					<form id="myForm" action="upload.php" method="post" enctype="multipart/form-data" novalidate>
+						<button id="poppy">Select</button>
+							<img id="image" style="width: 100%;">
+							<input type="submit" value="Create Square" class="btn btn-success" disabled="true" style="width: 100%; margin-top: 10px;">
 				</form>
 			</div>
 		</div>
 	</div>
+	<script>
+		$("#poppy").poppy("popup-1");
+	</script>
 </html>

@@ -318,11 +318,13 @@ h1{
 		float: none;
 	}
 	#account{
-		width: 248px;
+		width: 100%;
 		height: 65px; 
 		margin-bottom: 22px;
 		margin-top: 15px;
 		text-align: right;
+		float: right;
+
 	}
 	#nombre img{
 		margin-top: 0;
@@ -348,8 +350,6 @@ h1{
 		transition: width 0.3s ease;
 		float: left;
 		padding-left: 10px;
-		overflow-y: scroll;
-		overflow-x: none;
 		height: 1110px;
 	}
 	#content{
@@ -495,8 +495,6 @@ h1{
 		width: 155px;
 		transition: width 0.3s ease;
 		padding-left: 10px;
-		overflow-y: scroll;
-		overflow-x: none;
 		height: 1110px;
 	}
 	#content{

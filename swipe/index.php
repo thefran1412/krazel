@@ -152,7 +152,7 @@ else{
 						Login
 					</div>
 					<div class="menuright">
-						<p><a href="index.php">ABOUT US</a></p>
+						<p><a href="#">ABOUT US</a></p>
 						<p><a href="#">UPDATES</a></p>
 						<p><a href="#">WHAT'S THIS</a></p>
 						<p><a href="#">ENIGMA</a></p>
