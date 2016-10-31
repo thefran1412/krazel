@@ -51,8 +51,10 @@
 			</div>
 		</div>
 		<div class="poppy" id="popup-1">
+			<div></div>
 			<h2>Select an image:</h2><br>
-			<input type="file" name="image">
+			<input type="file" name="image" id="fileToCrop">
+			<div id="complete"></div>
 			<br><br><br><br><hr>
 			<p>Select Image:</p><br><br><br><br><br>
 		</div>
@@ -65,8 +67,8 @@
 					<h2>Url:</h2>
 					<input type="url" name="url">
 					<h2>Select Image:</h2>
-					<form id="myForm" action="upload.php" method="post" enctype="multipart/form-data" novalidate>
-						<button id="poppy">Select</button>
+					<button id="poppy">Select</button>
+					<form id="Form" action="" method="post" enctype="multipart/form-data" novalidate>
 							<img id="image" style="width: 100%;">
 							<input type="submit" value="Create Square" class="btn btn-success" disabled="true" style="width: 100%; margin-top: 10px;">
 				</form>
