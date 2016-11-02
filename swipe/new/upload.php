@@ -1,14 +1,14 @@
 <?php
-
-if(isset($_FILES['fileToUpload'])){
+//var_dump($_POST, $_FILES);
+if(isset($_FILES['image'])){
 	$target_dir = "uploads/";
-	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	$target_file = $target_dir . basename($_FILES["image"]["name"]);
 	$uploadOk = 1;
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 	$errors = 100;
 
 	// Check if image file is a actual image or fake image
-	    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+	    $check = getimagesize($_FILES["image"]["tmp_name"]);
 	    if($check !== false) {
 	        //echo "File is an image - " . $check["mime"] . ".";
 	        $uploadOk = 1;
@@ -18,7 +18,7 @@ if(isset($_FILES['fileToUpload'])){
 	        $uploadOk = 0;
 	    }
 	// Check file size
-	if ($_FILES["fileToUpload"]["size"] > 5000000) {
+	if ($_FILES["image"]["size"] > 5000000) {
 	    //echo "Sorry, your file is too large.";
 	    $errors = 1;
 	    $uploadOk = 0;
@@ -46,7 +46,7 @@ if(isset($_FILES['fileToUpload'])){
 	}
 }
 else{
-	echo '3';
+	echo '3e';
 }
 
 /*
@@ -92,8 +92,8 @@ function info ($post, $file){
 			'w' => $post['w'],
 			'h' => $post['h']
 		),
-		'url' => 'uploads/'.time()."_".basename($file["fileToUpload"]["name"]),
-		'src' => $file["fileToUpload"]['tmp_name']
+		'url' => 'uploads/'.time()."_".basename($file["image"]["name"]),
+		'src' => $file["image"]['tmp_name']
 	);
 	return $coords;
 }

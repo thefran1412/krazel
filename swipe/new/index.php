@@ -50,26 +50,39 @@
 				</div>
 			</div>
 		</div>
-		<div class="poppy" id="popup-1">
-			<div></div>
-			<h2>Select an image:</h2><br>
-			<input type="file" name="image" id="fileToCrop">
-			<div id="complete"></div>
-			<br><br><br><br><hr>
-			<p>Select Image:</p><br><br><br><br><br>
+		<!-- POP UP: start -->
+		<div class="poppy" id="popup-1" hidden="true">
+			<div id="file">
+				<div id="complete"></div>
+				<h2>Select an image:</h2><br>
+				<form id="resizeForm" action="upload.php" method="post" enctype="multipart/form-data" novalidate>
+				<input type="file" name="image" id="fileToUpload" accept="image/*"  class="upload">
+				<div id="preview" hidden="true">
+					<img id="image" style="width: 100%;">
+						<input type="number" id="x" name="x" hidden="true">
+						<input type="number" id="y" name="y" hidden="true">
+						<input type="number" id="w" name="w" hidden="true">
+						<input type="number" id="h" name="h" hidden="true">
+						<input type="submit" id="crop" style="width: 100%;">
+					</form>
+				</div>
+			</div>
+			<div id="select">
+				<br><br><br><br><hr>
+				<p>Select Image:</p><br><br><br><br><br>
+			</div>
 		</div>
+		
 		<div id="body">
 			<div class="main">
 				<h1>New Square</h1>
-				
 					<h2>Title:</h2>
 					<input type="text" name="title">
 					<h2>Url:</h2>
 					<input type="url" name="url">
 					<h2>Select Image:</h2>
-					<button id="poppy">Select</button>
+					<button type="button" id="poppy">Select</button>
 					<form id="Form" action="" method="post" enctype="multipart/form-data" novalidate>
-							<img id="image" style="width: 100%;">
 							<input type="submit" value="Create Square" class="btn btn-success" disabled="true" style="width: 100%; margin-top: 10px;">
 				</form>
 			</div>

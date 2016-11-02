@@ -30,13 +30,13 @@ if ($detect->isMobile() && !$detect->isTablet()) {
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script>
-			$( document ).ready(function() {
-				$( document ).on( "swipeleft swiperight", "#krazel-everything", function( e ) {
-					if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) {
-						if ( e.type === "swipeleft"  ) {
-							$( "#right-panel" ).panel( "open" );
-						} else if ( e.type === "swiperight" ) {
-							$( "#left-panel" ).panel( "open" );
+			$(document).ready(function(){
+				$( document ).on( "swipeleft swiperight", "#krazel-everything", function(e) {
+					if ( $.mobile.activePage.jqmData("panel") !== "open"){
+						if (e.type === "swipeleft"){
+							$("#right-panel").panel("open");
+						} else if (e.type === "swiperight"){
+							$("#left-panel").panel("open");
 						}
 					}
 				});
