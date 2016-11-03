@@ -51,28 +51,35 @@
 			</div>
 		</div>
 		<!-- POP UP: start -->
+		<form id="resizeForm" action="upload.php" method="post" enctype="multipart/form-data" novalidate>
 		<div class="poppy" id="popup-1" hidden="true">
-			<div id="file">
-				<div id="complete"></div>
+			<div id="options">
 				<h2>Select an image:</h2><br>
-				<form id="resizeForm" action="upload.php" method="post" enctype="multipart/form-data" novalidate>
-				<input type="file" name="image" id="fileToUpload" accept="image/*"  class="upload">
-				<div id="preview" hidden="true">
-					<img id="image" style="width: 100%;">
-						<input type="number" id="x" name="x" hidden="true">
-						<input type="number" id="y" name="y" hidden="true">
-						<input type="number" id="w" name="w" hidden="true">
-						<input type="number" id="h" name="h" hidden="true">
-						<input type="submit" id="crop" style="width: 100%;">
-					</form>
+				<div id="file">
+					<input type="file" name="image" id="fileToUpload" accept="image/*"  class="upload">
+					<div id="errors" hidden>
+						
+					</div>
+				</div>
+				<div id="select">
+					<br><br><br><br><hr>
+					<p>Select Image:</p><br><br><br><br><br>
 				</div>
 			</div>
-			<div id="select">
-				<br><br><br><br><hr>
-				<p>Select Image:</p><br><br><br><br><br>
+			<div id="crop" hidden>
+				<h2>Crop the image:</h2><br>
+				<div id="preview" >
+					<img id="image" style="width: 100%;">
+					<input type="submit" value="Done">
+					<input type="number" id="x" name="x" hidden="true">
+					<input type="number" id="y" name="y" hidden="true">
+					<input type="number" id="w" name="w" hidden="true">
+					<input type="number" id="h" name="h" hidden="true">
+				</div>
 			</div>
 		</div>
-		
+		</form>
+		<!-- POP UP: end -->
 		<div id="body">
 			<div class="main">
 				<h1>New Square</h1>
@@ -88,7 +95,4 @@
 			</div>
 		</div>
 	</div>
-	<script>
-		$("#poppy").poppy("popup-1");
-	</script>
 </html>
