@@ -38,6 +38,16 @@ $(function(){
                 $("#options").hide();
                 $("#crop").show();
                 reader.readAsDataURL(document.getElementById("fileToUpload").files[0]);
+                $(function(){ $('#image').Jcrop();});
+                // $(function(){
+                //     $('#image').Jcrop({
+                //         onSelect: showCoords,
+                //         onChange: showCoords,
+                //         boxWidth: 460,
+                //         aspectRatio: 1,
+                //         onRelease: disable
+                //     });
+                // });
                 // jcrop_api = $.Jcrop('#image', {
                 //     boxWidth: 460,
                 //     aspectRatio: 1,
@@ -46,7 +56,8 @@ $(function(){
                 //     onRelease: disable,
                 // });
                 //getCrop();
-                //changeImage(document.getElementById("image").src);
+                //jcrop_api.setImage(document.getElementById("image").src);
+                changeImage(document.getElementById("image").src);
             }
             else{
                 err('File extension not allowed.');
@@ -99,6 +110,10 @@ function showCoords(c){
     document.getElementById("y").value=c.y;
     document.getElementById("w").value=c.w;
     document.getElementById("h").value=c.h;
+    console.log(c.x);
+    console.log(c.y);
+    console.log(c.w);
+    console.log(c.h);
     $('input[type="submit"]').prop('disabled', false);
 };
 function disable(){
