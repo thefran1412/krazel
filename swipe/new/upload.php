@@ -1,5 +1,5 @@
 <?php
-//var_dump($_POST, $_FILES);
+var_dump($_POST, $_FILES);
 if(isset($_FILES['image'])){
 	$target_dir = "uploads/";
 	$target_file = $target_dir . basename($_FILES["image"]["name"]);

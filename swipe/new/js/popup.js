@@ -38,7 +38,14 @@ $(function(){
                 $("#options").hide();
                 $("#crop").show();
                 reader.readAsDataURL(document.getElementById("fileToUpload").files[0]);
-                $(function(){ $('#image').Jcrop();});
+                getCrop();
+                // $(function(){
+                //     $('#image').Jcrop({
+                //         onChange: showCoords,
+                //         onSelect: showCoords
+                //     });
+                // });
+                //$(function(){ $('#image').Jcrop();});
                 // $(function(){
                 //     $('#image').Jcrop({
                 //         onSelect: showCoords,
@@ -57,7 +64,8 @@ $(function(){
                 // });
                 //getCrop();
                 //jcrop_api.setImage(document.getElementById("image").src);
-                changeImage(document.getElementById("image").src);
+                //changeImage(document.getElementById("image").src);
+                //Jcrop.setImage(document.getElementById("image").src);
             }
             else{
                 err('File extension not allowed.');
