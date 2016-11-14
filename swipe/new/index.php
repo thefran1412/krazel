@@ -13,6 +13,8 @@
 		<script src="js/jquery.Jcrop.min.js"></script>
 		<link rel="stylesheet" href="css/jquery.Jcrop.css" type="text/css" />
 
+        <link rel="Stylesheet" type="text/css" href="croppie/croppie.css" />
+        <script src="croppie/croppie.js"></script>
 
 		<link rel="icon" href="../images/favicon.png">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">

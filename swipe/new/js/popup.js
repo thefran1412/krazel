@@ -38,7 +38,9 @@ $(function(){
                 $("#options").hide();
                 $("#crop").show();
                 reader.readAsDataURL(document.getElementById("fileToUpload").files[0]);
-                getCrop();
+
+                
+                //getCrop();
                 // $(function(){
                 //     $('#image').Jcrop({
                 //         onChange: showCoords,
