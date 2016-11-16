@@ -149,7 +149,6 @@ var Demo = (function() {
 	            	});
 	            	
 	            }
-	            
 	            reader.readAsDataURL(input.files[0]);
 	        }
 	        else {
@@ -213,12 +212,12 @@ var Demo = (function() {
 	}
 
 	function init() {
-		bindNavigation();
-		demoMain();
-		demoBasic();	
-		demoVanilla();	
+		// bindNavigation();
+		// demoMain();
+		// demoBasic();	
+		// demoVanilla();	
 		demoUpload();
-		demoHidden();
+		// demoHidden();
 	}
 
 	return {
