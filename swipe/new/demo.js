@@ -63,7 +63,8 @@ var Demo = (function() {
 				type: 'canvas',
 				size: 'viewport'
 			}).then(function (blob) {
-				window.open(blob);
+				//window.open(blob);
+				$("#url").val(blob);
 			});
 		});
 	}
@@ -93,7 +94,7 @@ var Demo = (function() {
 // Full version of `log` that:
 //  * Prevents errors on console methods when no console present.
 //  * Exposes a global 'log' function that preserves line numbering and formatting.
-(function () {
+/*(function () {
   var method;
   var noop = function () { };
   var methods = [
@@ -123,4 +124,4 @@ var Demo = (function() {
       Function.prototype.apply.call(console.log, console, arguments);
     };
   }
-})();
+})();*/

@@ -14,7 +14,6 @@
 		<link rel="stylesheet" href="css/jquery.Jcrop.css" type="text/css" />
 
         <link rel="Stylesheet" type="text/css" href="croppie/croppie.css" />
-        <script src="croppie/croppie.js"></script>
 
 		<link rel="icon" href="../images/favicon.png">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
@@ -53,12 +52,14 @@
 			</div>
 		</div>
 		<!-- POP UP: start -->
-		<form id="resizeForm" action="upload.php" method="post" enctype="multipart/form-data" novalidate>
 		<div class="poppy" id="popup-1" hidden="true">
 			<div id="options">
 				<h2>Select an image:</h2><br>
 				<div id="file">
-					<input type="file" name="image" id="fileToUpload" accept="image/*"  class="upload">
+					<a class="btn file-btn">
+                        <span>Upload</span>
+                        <input type="file" id="upload" value="Choose a file" accept="image/*" />
+                    </a>
 					<div id="errors" hidden>
 						
 					</div>
@@ -71,16 +72,24 @@
 			<div id="crop" hidden>
 				<h2>Crop the image:</h2><br>
 				<div id="preview" >
-					<img id="image" style="width: 100%;">
-					<input type="submit" value="Done">
-					<input type="number" id="x" name="x" hidden="true">
-					<input type="number" id="y" name="y" hidden="true">
-					<input type="number" id="w" name="w" hidden="true">
-					<input type="number" id="h" name="h" hidden="true">
+					<div class="grid">
+                        <div>
+                            <div class="actions">
+                                <form id="upform" method="post" action="upload2.php" enctype="multipart/form-data">
+                                	<input type="hidden" id="url" name="url">
+                                	<input type="submit" class="upload-result" style="width: 100%;" name="Upload">
+                                </form>
+                            </div>
+                        </div>
+                        <div id="view">
+                            <div class="upload-demo-wrap">
+                                <div id="upload-demo"></div>
+                            </div>
+                        </div>
+                    </div>
 				</div>
 			</div>
 		</div>
-		</form>
 		<!-- POP UP: end -->
 		<div id="body">
 			<div class="main">
@@ -98,3 +107,5 @@
 		</div>
 	</div>
 </html>
+<script src="croppie/croppie.js"></script>
+<script src="demo.js"></script>
