@@ -99,6 +99,7 @@
 					<h2>Url:</h2>
 					<input type="url" name="url">
 					<h2>Select Image:</h2>
+					<img id="previewimg" src="uploads/1476867915_9d256a2b691a1a35f66d8919342b4f16.jpg" hidden>
 					<button type="button" id="poppy">Select</button>
 					<form id="Form" action="" method="post" enctype="multipart/form-data" novalidate>
 							<input type="submit" value="Create Square" class="btn btn-success" disabled="true" style="width: 100%; margin-top: 10px;">

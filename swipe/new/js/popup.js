@@ -41,15 +41,26 @@ $(function(){
     $("#upform").submit(function(e){
         e.preventDefault();
         $.ajax({
+            method: "POST",
             url: "upload.php",
+            data: {url: $("#url").val()},
             success: function(result){
-                console.html(result);
+                console.log(result);
+                imageUploaded(result);
             }
         });
     });
 
 });
 
+
+function imageUploaded(result){
+    console.log('entered');
+    closePoppy();
+    opened = false;
+    $("#previewimg").attr("src", result);
+    $("#previewimg").show();
+}
 //POPUP: start
 function reset(){
     $("#options").show();
@@ -64,6 +75,7 @@ function resize(){
 function closePoppy(){
     $("#poppyScreen, .poppy").fadeOut();
     $('body').css('overflow-y', 'auto');
+    opened = false;
 }
 function validateImg(file){
     var fileType = file["type"];
@@ -83,72 +95,72 @@ function err(text){
 //POPUP: end
 
 
-    function output(node) {
-        var existing = $('#result .croppie-result');
-        if (existing.length > 0) {
-            existing[0].parentNode.replaceChild(node, existing[0]);
+function output(node) {
+    var existing = $('#result .croppie-result');
+    if (existing.length > 0) {
+        existing[0].parentNode.replaceChild(node, existing[0]);
+    }
+    else {
+        $('#result')[0].appendChild(node);
+    }
+}
+function demoUpload() {
+    var $uploadCrop;
+
+    function readFile(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $('.upload-demo').addClass('ready');
+                $uploadCrop.croppie('bind', {
+                    url: e.target.result,
+                    zoom: 0
+                }).then(function(){
+                    console.log('jQuery bind complete');
+                });
+                
+            }
+            reader.readAsDataURL(input.files[0]);
         }
         else {
-            $('#result')[0].appendChild(node);
+            swal("Sorry - you're browser doesn't support the FileReader API");
         }
     }
-    function demoUpload() {
-        var $uploadCrop;
 
-        function readFile(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-                
-                reader.onload = function (e) {
-                    $('.upload-demo').addClass('ready');
-                    $uploadCrop.croppie('bind', {
-                        url: e.target.result,
-                        zoom: 0
-                    }).then(function(){
-                        console.log('jQuery bind complete');
-                    });
-                    
-                }
-                reader.readAsDataURL(input.files[0]);
-            }
-            else {
-                swal("Sorry - you're browser doesn't support the FileReader API");
-            }
-        }
+    $uploadCrop = $('#upload-demo').croppie({
+        viewport: {
+            width: 350,
+            height: 350
+        },
+        boundary: {
+            width: 500,
+            height: 400
+        },
+        enableExif: true
 
-        $uploadCrop = $('#upload-demo').croppie({
-            viewport: {
-                width: 350,
-                height: 350
-            },
-            boundary: {
-                width: 500,
-                height: 400
-            },
-            enableExif: true
+    });
 
+    $('#upload').on('change', function () { readFile(this); });
+
+    document.querySelector('.upload-result').addEventListener('click', function (ev) {
+        $uploadCrop.croppie('result', {
+            type: 'canvas',
+            size: 'viewport'
+        }).then(function (blob) {
+            $("#url").val(blob);
         });
+    });
+}
 
-        $('#upload').on('change', function () { readFile(this); });
+function bindNavigation () {
+    var $body = $('body');
+    $('nav a').on('click', function (ev) {
+        var lnk = $(ev.currentTarget),
+            href = lnk.attr('href'),
+            targetTop = $('a[name=' + href.substring(1) + ']').offset().top;
 
-        document.querySelector('.upload-result').addEventListener('click', function (ev) {
-            $uploadCrop.croppie('result', {
-                type: 'canvas',
-                size: 'viewport'
-            }).then(function (blob) {
-                $("#url").val(blob);
-            });
-        });
-    }
-
-    function bindNavigation () {
-        var $body = $('body');
-        $('nav a').on('click', function (ev) {
-            var lnk = $(ev.currentTarget),
-                href = lnk.attr('href'),
-                targetTop = $('a[name=' + href.substring(1) + ']').offset().top;
-
-            $body.animate({ scrollTop: targetTop });
-            ev.preventDefault();
-        });
-    }
+        $body.animate({ scrollTop: targetTop });
+        ev.preventDefault();
+    });
+}
