@@ -128,6 +128,7 @@ else{
 		<link rel="stylesheet" href="styles/style-index-desktop.css" media="all" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="js/scripts.js"></script>
+		<script src="js/popup.js"></script>
 	</head>
 	<div id = "everything">
 		<div id = "header">	
@@ -149,7 +150,7 @@ else{
 				</div>
 				<div id="div-right" align="right">
 					<div id="account";>
-						Login
+						<input type="button" id="login" value="Login">
 					</div>
 					<div class="menuright">
 						<p><a href="#">ABOUT US</a></p>
@@ -185,6 +186,22 @@ else{
 			</div>
 		</div>
 	</div>
+	<!-- POP UP: start -->
+		<div class="poppy" id="popup-1" hidden="true">
+			<div id="poppyleft">
+				
+			</div>
+			<div id="poppyright">
+				<div id="form">
+					<h3>Log in</h3>
+					<input type="text" name="User">
+					<input type="password" name="Password">
+					<input type="button" name="Enter" value="Enter">
+				</div>
+			</div>
+		</div>
+		<!-- POP UP: end -->
+	<link rel="stylesheet" type="text/css" href="styles/syle-popup.css">
 </html>
 <?php
 }

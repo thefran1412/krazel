@@ -1,0 +1,66 @@
+/*#popup{
+	border-radius: 8px;
+	position: absolute;
+	left: 48%;
+	top: 50px;
+	height: 100px;
+	width: 400px;
+	background-color: #f5f5f5;
+}*/
+.poppy {
+  position: absolute;
+  top: 40px;
+  z-index: 999;
+  background-color: #fff;
+  box-shadow: 2px 2px 8px 2px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  width: 50%;
+  height: 400px;
+  overflow: hidden; 
+}
+#poppyleft{
+	background-color: orange;
+	height: 100%;
+	width: 50%;
+	float: left;
+}
+#poppyright{
+	height: 100%;
+	width: 50%;
+	float: right;
+	text-align: center;
+}
+#form{
+	line-height: 50px;
+	position:absolute;
+	top:35%;
+}
+input[type=text], input[type=password]{
+	height: 30px;
+	border: 1px solid grey;
+	border-radius: 15px;
+	padding: 12px 20px;
+}
+.close-btn {
+  height: 15px;
+  width: 15px;
+  border-radius: 15px;
+  /*margin: 5px -10px;*/
+  float: right;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background-color: #BC5B46;
+  content: "";
+  cursor: pointer;
+}
+
+#poppyScreen {
+  background-color: #000;
+  position: absolute;
+  z-index: 998;
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
+  display: none;
+}
