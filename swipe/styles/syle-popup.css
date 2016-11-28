@@ -41,6 +41,23 @@ input[type=text], input[type=password]{
 	border-radius: 15px;
 	padding: 12px 20px;
 }
+input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 15px; 
+}
+.error{
+  width: 90%;
+  height: 25px;
+  background-color: #ff9898;
+  border: 1px solid #f33838;
+  margin: 5%;
+  border-radius: 5px;
+  line-height: 25px;
+}
 .close-btn {
   height: 15px;
   width: 15px;

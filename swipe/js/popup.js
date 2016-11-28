@@ -27,6 +27,37 @@ $(function(){
         }
     });
     //POPUP FUNCTIONALITY: END
+    $("#loginform").submit(function(e){
+        e.preventDefault();
+        if ($("#username").val() == "" || $("#passwd").val() == "") {
+        	console.log('values empty');
+        	$('.error').html("There's empty fields.");
+        	$('.error').fadeIn('fast');
+        }
+        else{
+        	$('.error').hide();
+	        $.ajax({
+	            method: "POST",
+	            url: "src/login.php",
+	            data: {User: $("#username").val(), Password: $("#passwd").val()},
+	            success: function(result){
+	                console.log(result);
+	                if(result == "failed"){
+	                	$('.error').html("Username or password don't match");
+        				$('.error').fadeIn('fast');
+	                }
+	                else if (result == "empty") {
+	                	$('.error').html("There's empty fields.");
+        				$('.error').fadeIn('fast');
+	                }
+	                else{
+	                	window.location.replace("index.php");
+	                	//location.href=location.href.replace(/&?action=([^&]$|[^&]*)/i, "");
+	                }
+	            }
+	        });
+        }
+    });
 });
 
 

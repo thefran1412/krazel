@@ -6,12 +6,10 @@ class Session {
 	}
 	
 	public function createSession ($name, $value){
-		$this->startSession();
 		$_SESSION[$name] = $value;
 	}
 	
 	public function deleteSession (){
-		$this->startSession();
 		session_destroy();
 	}
 	

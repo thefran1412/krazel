@@ -15,6 +15,17 @@ $squares = new Square();
 
 $categories = new Category();
 
+if (isset($_GET['action'])) {
+	if ($_GET['action'] == "logout") {
+		$session->deleteSession();
+		header('Location: index.php');
+	}
+}
+$logged = false;
+if ($session->exists('username')) {
+	$logged = true;
+}
+
 if ($detect->isMobile() && !$detect->isTablet()) {
 ?> 
 	<!DOCTYPE html>
@@ -149,8 +160,15 @@ else{
 					<p><a href="?" style="border: none;"><img src="images/logo_alpha.png" id = "logo"/></a></p>
 				</div>
 				<div id="div-right" align="right">
-					<div id="account";>
-						<input type="button" id="login" value="Login">
+					<div id="account">
+						<?php 
+							if ($logged === true) {
+								echo '<a href="?action=logout">Log out</a>';
+							}
+							else{
+								echo '<input type="button" id="login" value="Login">';
+							}?>
+
 					</div>
 					<div class="menuright">
 						<p><a href="#">ABOUT US</a></p>
@@ -194,9 +212,12 @@ else{
 			<div id="poppyright">
 				<div id="form">
 					<h3>Log in</h3>
-					<input type="text" name="User">
-					<input type="password" name="Password">
-					<input type="button" name="Enter" value="Enter">
+					<form method="post" id="loginform" action="src/login.php">
+						<input type="text" id="username" name="User">
+						<input type="password" id="passwd" name="Password">
+						<br><input type="submit" value="Login">
+					</form>
+					<div class="error" hidden>Error!</div>
 				</div>
 			</div>
 		</div>

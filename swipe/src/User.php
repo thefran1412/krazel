@@ -22,7 +22,7 @@ class User extends dataBase{
 		}
 	}
 	
-	function getUser ($id){
+	function getUser($id){
 		$sql = 'SELECT * FROM users WHERE id_user = '.$id.';';
 		$row = $this->getData($sql);
 		
@@ -41,5 +41,18 @@ class User extends dataBase{
 		$id = $row["id_user"];
 		
 		return $id;
+	}
+	function login ($username, $password){
+		$pass = sha1($password);
+		$sql = "SELECT id_user FROM users WHERE username = '{$username}' AND passwd = '{$pass}'";
+		$result = $this->getData($sql);
+
+		 if ($result->num_rows != 0) {
+		 	$row = mysqli_fetch_assoc($result);
+		 	return $row['id_user'];
+		 }
+		 else{
+		 	return false;
+		 }
 	}
 }
