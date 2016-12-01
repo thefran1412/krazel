@@ -1,3 +1,5 @@
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,6 +22,11 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+@font-face {
+    font-family: basicTitleFont;
+    src: url('fonts/basictitlefont.ttf');
+}
+
 body {
 	background: #F5F5F5;
 	transition: background-color 0.5s; 
@@ -32,9 +39,16 @@ li {
 #holaaa{
 	border: solid orange 1px;
 }
+#cont_square{
+	display: inline-block;
+}
 .fst-post, .snd-post, .page-post, .normal-post{
 	margin: 10px;
 	float: left;
+	border-radius: 5px;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	overflow: hidden;
 }
 .fst-post h5, .snd-post h5, .page-post h5, .normal-post h5{
 	position: relative;
@@ -51,11 +65,13 @@ li {
 	width: 100%;
 	height: 100%;
 	transition: opacity 0.5s ease;
-	border: 1px solid grey;
+	border-radius: 5px;
+	/*border: 1px solid grey;*/
 }
 .fst-post:hover img, .snd-post:hover img, .page-post:hover img, .normal-post:hover img{
 	opacity: 0.3;
 	transition: opacity 0.5s ease;
+
 }
 
 .fst-post{
@@ -90,6 +106,7 @@ li {
 }
 #menu a{
 	transition: color 0.5s ease;
+	font-family
 }
 @media only screen and (min-width: 1160px) {
 
@@ -163,7 +180,7 @@ h1{
 }
 #body{
 	display: block;
-	border: solid grey 1px;
+	/*border: solid grey 1px;*/
 	margin-top: 10px;
 
 }
@@ -181,7 +198,7 @@ h1{
 	height: 640px;
 }
 #content{
-	padding-top: 20px;
+	/*padding-top: 20px;*/
 	width: 732px;
 	transition: width 0.5s ease;
 	text-align: center;
@@ -211,7 +228,6 @@ h1{
 		height: 350px;
 		margin: 5px 0px;
 		float: none;
-		background-color: white;
 	}
 	.snd-post{
 		width: 350px;
@@ -330,7 +346,7 @@ h1{
 		margin-top: 0;
 	}
 	#body{
-		border: solid grey 1px;
+		/*border: solid grey 1px;*/
 		margin-top: 10px;
 		text-align: center;
 		padding-top: 10px;
@@ -480,7 +496,7 @@ h1{
 	}
 	#body{
 		display: block;
-		border: solid grey 1px;
+		/*border: solid grey 1px;*/
 		margin-top: 10px;
 		width: 540px;
 	}

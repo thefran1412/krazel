@@ -187,13 +187,13 @@ else{
 				?>
 			</div>
 			<div id="content">
+				<div id="cont_square">
+					
+				</div>
 				<div id="pag">
 					<p id="pageinfo">Page # of #</p>
 					<button id="previous" onclick="prvsPage();">Before</button>
 					<button id="next" onclick="nextPage();">Next</button>
-				</div>
-				<div id="cont_square">
-					
 				</div>
 			</div>
 			<div id="ranking">
