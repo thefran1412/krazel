@@ -47,7 +47,8 @@ li {
 	float: left;
 	border-radius: 5px;
 	background-color: white;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+	box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2),0 0 0 1px rgba(0,0,0,0.08);
 	overflow: hidden;
 }
 .fst-post h5, .snd-post h5, .page-post h5, .normal-post h5{
@@ -71,7 +72,7 @@ li {
 .fst-post:hover img, .snd-post:hover img, .page-post:hover img, .normal-post:hover img{
 	opacity: 0.3;
 	transition: opacity 0.5s ease;
-
+	
 }
 
 .fst-post{
