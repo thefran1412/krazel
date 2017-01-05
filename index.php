@@ -140,6 +140,9 @@ else{
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="js/scripts.js"></script>
 		<script src="js/popup.js"></script>
+
+		<link rel="stylesheet" href="styles/acordeon.css">
+		<script src="js/acordeon.js"></script>
 	</head>
 	<div id = "everything">
 		<div id = "header">	
