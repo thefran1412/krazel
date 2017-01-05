@@ -250,14 +250,39 @@ class Square extends dataBase{
 		}
 	}
 	function getRanking(){
-		$sql = 'SELECT s.title, SUM(p.quantity) as "suma"FROM squares s, payments p WHERE s.id_square = p.id_square GROUP BY S.title ORDER BY suma desc LIMIT 20;';
+		$sql = 'SELECT s.title, s.image, u.username, SUM(p.quantity) as "suma"
+			FROM squares s, payments p, users u
+			WHERE s.id_square = p.id_square AND s.id_user = u.id_user
+			GROUP BY S.title, s.image, u.username
+			ORDER BY suma desc LIMIT 20';
 		$result = $this->getData($sql);
 		$count = 1;
+		echo '<ul>';
 		foreach ($result as $row) {
 			$title = $row['title'];
 			$price = $row['suma'];
-			echo '<p><strong>'.$count.'.</strong> '.$title.'</p>';
+			$url = $row['image'];
+			$username = $row['username'];
+			if ($count <= 9) {
+				 $counts = '&nbsp'.$count;
+			}
+			else{
+				$counts = $count;
+			}
+			if ($count == 1) {
+				echo '<li><div class="fst-rank"><img src="'.$url.'"><p>'.$counts.'</p></div><div class="name-rank"><p class="username">'.$username.'</p><p class="price">'.$price.' €</p></div></li>';
+			}
+			elseif ($count == 2) {
+				echo '<li><div class="snd-rank"><img src="'.$url.'"><p>'.$counts.'</p></div><div class="name-rank"><p class="username">'.$username.'</p><p class="price">'.$price.' €</p></div></li>';
+			}
+			elseif ($count == 3) {
+				echo '<li><div class="trd-rank"><img src="'.$url.'"><p>'.$counts.'</p></div><div class="name-rank"><p class="username">'.$username.'</p><p class="price">'.$price.' €</p></div></li>';
+			}
+			else{
+				echo '<li><div class="rank"><img src="'.$url.'"><p>'.$counts.'</p></div><div class="name-rank"><p class="username">'.$username.'</p><p class="price">'.$price.' €</p></div></li>';
+			}
 			$count++;
 		}
+		echo '</ul>';
 	}
 }

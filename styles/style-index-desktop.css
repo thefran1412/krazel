@@ -109,6 +109,74 @@ li {
 	transition: color 0.5s ease;
 	font-family
 }
+
+
+.fst-rank, .snd-rank, .trd-rank, .rank{
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	overflow: hidden;
+	float: left;
+	display: block;
+}
+.fst-rank p, .snd-rank p, .trd-rank p, .rank p{
+	position: relative;
+	top: -40px;
+	left: 7px;
+	display: inline-block;
+	text-shadow: 0.5px 0.5px 1px black;
+	color: white;
+}
+.fst-rank img, .snd-rank img, .trd-rank img, .rank img{
+	width: 40px;
+	height: 40px;
+	position: relative;
+    top: -6px;
+    left: -6px;
+	filter: brightness(90%) blur(5px);
+}
+.fst-rank {
+	border: 5px solid #d4af37;
+}
+.snd-rank {
+	border: 5px solid #c0c0c0;
+}
+.trd-rank {
+	border: 5px solid #cd7f32;
+}
+.rank {
+	border: 2px solid black;
+}
+.name-rank{
+	line-height: 37px;
+	vertical-align: middle;
+}
+.username{
+	padding: 0 20px;
+}
+.price{
+	padding: 0 10px;
+	float: right;
+}
+.name-rank{
+	width: 100%;
+}
+.name-rank p {
+	display: inline-block;
+}
+
+#ranking li {
+	height: 37px;
+}
+
+
+
+
+
+
+
+
+
 @media only screen and (min-width: 1160px) {
 
 
