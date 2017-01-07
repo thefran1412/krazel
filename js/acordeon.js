@@ -2,7 +2,7 @@ $(function(){
     $('.arrow').on("click",function(){
             var $elem = $(this);
             if ($(this).parent().children('.sub').is(":visible")) {
-                $(this).parent().children('.sub').slideUp();
+                $(this).parent().children('.sub').slideUp(250);
                 
                 $({deg: 90}).animate({deg: 0}, {
                     duration: 120,
@@ -14,7 +14,7 @@ $(function(){
                 });
             }
             else{
-                $(this).parent().children('.sub').slideDown();
+                $(this).parent().children('.sub').slideDown(250);
                 $({deg: 0}).animate({deg: 90}, {
                     duration: 120,
                     step: function(now) {

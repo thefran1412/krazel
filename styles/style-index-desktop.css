@@ -152,10 +152,10 @@ li {
 	vertical-align: middle;
 }
 .username{
-	padding: 0 20px;
+	padding: 0 0 0 20px;
 }
 .price{
-	padding: 0 10px;
+	padding: 0 0 0 10px;
 	float: right;
 }
 .name-rank{
