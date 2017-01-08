@@ -12,9 +12,10 @@ $( document ).ready(function() {
 			sd.push([id, text]);
 		});
 		// console.log(sd);
-		$('.subsel').fadeOut();
+		var usb = $(this).parent().parent();
+		usb.fadeOut();
 		jQuery.each( sd, function( i, val ) {
-			$('.cat-content').append(
+			usb.parent().append(
 				'<div class="sub">'+
 					'<p hidden>'+val[0]+'</p>'+
 					'<p>'+val[1]+'</p>'+
