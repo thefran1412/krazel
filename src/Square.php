@@ -253,7 +253,7 @@ class Square extends dataBase{
 		$sql = 'SELECT s.title, s.image, u.username, SUM(p.quantity) as "suma"
 			FROM squares s, payments p, users u
 			WHERE s.id_square = p.id_square AND s.id_user = u.id_user
-			GROUP BY S.title, s.image, u.username
+			GROUP BY s.title, s.image, u.username
 			ORDER BY suma desc LIMIT 20';
 		$result = $this->getData($sql);
 		$count = 1;

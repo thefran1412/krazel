@@ -165,7 +165,6 @@ function bindNavigation () {
         var lnk = $(ev.currentTarget),
             href = lnk.attr('href'),
             targetTop = $('a[name=' + href.substring(1) + ']').offset().top;
-
         $body.animate({ scrollTop: targetTop });
         ev.preventDefault();
     });

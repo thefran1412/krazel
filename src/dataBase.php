@@ -5,6 +5,10 @@ class dataBase {
 	protected $password = "";
 	protected $dbname = "krazel";
 	public $conn;
+	/*protected $servername = "50.87.147.176";
+	protected $username = "isselect_dkrazel";
+	protected $password = "0PLNvieAtZlJ";
+	protected $dbname = "isselect_krazel";*/
 	
 	public function connect (){
 		// Create connection

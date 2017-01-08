@@ -9,6 +9,7 @@
 		<script src="http://malsup.github.com/jquery.form.js"></script> 
 		<script src="js/script.js"></script>
 		<script src="js/popup.js"></script>
+		<script src="js/categories.js"></script>
 
 		<script src="js/jquery.Jcrop.min.js"></script>
 		<link rel="stylesheet" href="css/jquery.Jcrop.css" type="text/css" />
@@ -114,11 +115,15 @@
 					<h2>Url:</h2>
 					<input type="url" name="url">
 					<h2>Select Image:</h2>
+					<button type="button" id="poppy">Select</button><br>
 					<img id="previewimg" src="" hidden>
-					<button type="button" id="poppy">Select</button>
 					<form id="Form" action="" method="post" enctype="multipart/form-data" novalidate>
+							<div id="categoryes">
+								<div class="title_cat">Categories:<button class="add_cat">+ Add</button></div> 
+								<div class="select" hidden></div>
+							</div>
 							<input type="submit" value="Create Square" id="sub" disabled="true" style="width: 100%; margin-top: 10px;">
-				</form>
+					</form>
 			</div>
 		</div>
 	</div>
