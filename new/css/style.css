@@ -109,9 +109,12 @@ hr:after {
 }
 
 .cat-selected{
-  border: 1px solid black;
   margin: 10px;
-  background-color: #A5DEF1;
+  background-color: #354649;
+  border-radius: 10px;
+  padding: 7px;
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
+  color: white;
 }
 
 .cat-header{
@@ -133,21 +136,45 @@ hr:after {
 .cat-content{
   min-height: 100px;
 }
-
+.subsel{
+  border: 1px solid white;
+  width: 100%;
+}
+.subcont{
+  display: inline-block;
+  text-align: center;
+}
 .cat-sub{
-  border-top: 1px solid white ;
+  border: 1px solid white;
   text-align: left;
+  width: 145px;
+  height: 50px;
+  float: left;
+  margin: 10px;
+  cursor: pointer;
+}
+.selected{
+  background-color: white;
+  color: #354649;
+}
 
+.sub{
+  border: 1px white solid;
+  width: 300px;
+  height: 50px;
+  display: inline-block;
+  margin: 10px;
 }
 input[type=number] {
-    border: none;
-    border-bottom: 2px solid red;
-    background-color: #A5DEF1;
-    padding: 4px;
-    -webkit-appearance: none;
+  border: none;
+  border-bottom: 2px solid red;
+  background-color: #354649;
+  padding: 4px;
+  -webkit-appearance: none;
+  color: white;
 }
 
-input:focus { 
-     border: none;
-    border-bottom: 2px solid red;
+input[type=number]:focus { 
+  border: none;
+  border-bottom: 2px solid red;
 }
