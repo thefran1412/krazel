@@ -184,7 +184,7 @@ else{
 		</div>
 		<div id="body">
 			<div id="categories">
-				<h2>CATEGORIES</h2>
+				<!-- <h2>CATEGORIES</h2> -->
 				<?php 
 					$categories->getCategories();
 				?>
@@ -200,7 +200,7 @@ else{
 				</div>
 			</div>
 			<div id="ranking">
-				<h2>RANKING</h2>
+				<!-- <h2>RANKING</h2> -->
 				<?php
 					$squares->getRanking();
 				?>

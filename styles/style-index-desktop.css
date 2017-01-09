@@ -167,12 +167,8 @@ li {
 
 #ranking li {
 	height: 37px;
+	margin-bottom: 8px;
 }
-
-
-
-
-
 
 
 
@@ -264,7 +260,7 @@ h1{
 	padding-top: 5px; 
 	overflow-y: scroll;
 	overflow-x: none;
-	height: 640px;
+	height: 530px;
 }
 #content{
 	/*padding-top: 20px;*/
