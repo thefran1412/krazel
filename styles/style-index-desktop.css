@@ -483,7 +483,7 @@ h1{
 	}
     #everything{
     	min-width: 542px;
-		width: 500px;
+		width: 600px;
 		transition: width 0.3s ease;
 		margin: 0 auto;
 
@@ -563,7 +563,7 @@ h1{
 		display: block;
 		/*border: solid grey 1px;*/
 		margin-top: 10px;
-		width: 540px;
+		width: 100%;
 	}
 	#ranking, #content, #categories{
 		display: inline-block;
@@ -579,12 +579,12 @@ h1{
 		height: 1110px;
 	}
 	#content{
-		width: 370;
+		width: 351px;
 		transition: width 0.3s ease;
 		text-align: center;
 	}
 	#wrap{
-		width: 370px;
+		width: 360px;
 		margin: 0 auto;
 	}
 	.fst-post{
@@ -592,7 +592,13 @@ h1{
 	}
 	#ranking{
 		width: 10px;
-		display: none;	
+		display: inline-block;
+		float: right;
+		width: 55px;
+		padding-left: 0;
+	}
+	.name-rank{
+		display: none;
 	}
 	#div-right, #div-left{
 		float: left;
