@@ -30,24 +30,24 @@
 						<img src="../images/Subtitle.png" id = "subtitle"/>
 					</div>
 					<div class="menuleft">
-						<p><a href="../">HOME</a></p>
+						<p><a href="../index.php">HOME</a></p>
 						<p><a href="index.php">NEW SQUARE </a></p>
-						<p><a href="#">EVENTS</a></p>
-						<p><a href="#">CONTACT US</a></p>
+						<p><a href="#">PROJECTS</a></p>
+						<!-- <p><a href="#">CONTACT US</a></p> -->
 					</div>
 				</div>
 				<div id="logo">
-					<p><a href="?" style="border: none;"><img src="../images/logo_alpha.png" id = "logo"/></a></p>
+					<p><a href="../index.php" style="border: none;"><img src="../images/logo_alpha.png" id = "logo"/></a></p>
 				</div>
 				<div id="div-right" align="right">
 					<div id="account";>
 						Login
 					</div>
 					<div class="menuright">
-						<p><a href="index.php">ABOUT US</a></p>
-						<p><a href="#">UPDATES</a></p>
 						<p><a href="#">WHAT'S THIS</a></p>
-						<p><a href="#">ENIGMA</a></p>
+						<p><a href="#">ABOUT US</a></p>
+						<p><a href="#">FEEDBACK</a></p>
+						<!-- <p><a href="#">ENIGMA</a></p> -->
 					</div>
 				</div>
 			</div>

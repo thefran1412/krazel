@@ -26,9 +26,9 @@ if ($session->exists('username')) {
 	$logged = true;
 }
 
-if ($detect->isMobile() && !$detect->isTablet()) {
+/*if ($detect->isMobile() && !$detect->isTablet()) {*/
 ?> 
-	<!DOCTYPE html>
+<!-- 	<!DOCTYPE html>
 	<html>
 	<head>
 		<link rel="icon" href="images/favicon.png">
@@ -77,25 +77,29 @@ if ($detect->isMobile() && !$detect->isTablet()) {
 					</div>
 				</div>
 			</div>
-	    </div><!-- /content -->
+	    </div>-->
 
-	    <div data-role="panel" id="left-panel" data-display="push" data-position="left">
+	    <!-- /content -->
+
+	    <!--<div data-role="panel" id="left-panel" data-display="push" data-position="left">
 
 	    	<p>CATEGORIES</p>
 			<a href="#" data-rel="close" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">Close</a>
 
-	    </div><!-- /panel -->
+	    </div>-->
 
-	    <div data-role="panel" id="right-panel" data-display="push" data-position="right">
+	    <!-- /panel -->
+
+	    <!-- <div data-role="panel" id="right-panel" data-display="push" data-position="right">
 
 	    	<p>RANKING</p>
 			<a href="#" data-rel="close">Close</a>
 
-	    </div><!-- /panel -->
+	    </div> --><!-- /panel -->
 
-	</div><!-- /page -->
-	</body>
-	</html>
+	<!-- </div> --><!-- /page -->
+	<!-- </body>
+	</html> -->
 				<!-- <a <div style="float: left; margin-left: 20px;" align="right">
 							<div id="account";>
 								account
@@ -126,13 +130,14 @@ if ($detect->isMobile() && !$detect->isTablet()) {
 
 
 <?php
-}
-else{
+/*}
+else{*/
 ?>
 
 <!DOCTYPE>
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="images/favicon.png">
 		<title>Krazel</title>
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
@@ -155,8 +160,8 @@ else{
 					<div class="menuleft">
 						<p><a href="index.php">HOME</a></p>
 						<p><a href="new">NEW SQUARE </a></p>
-						<p><a href="#">EVENTS</a></p>
-						<p><a href="#">CONTACT US</a></p>
+						<p><a href="#">PROJECTS</a></p>
+						<!-- <p><a href="#">CONTACT US</a></p> -->
 					</div>
 				</div>
 				<div id="logo">
@@ -174,10 +179,10 @@ else{
 
 					</div>
 					<div class="menuright">
-						<p><a href="#">ABOUT US</a></p>
-						<p><a href="#">UPDATES</a></p>
 						<p><a href="#">WHAT'S THIS</a></p>
-						<p><a href="#">ENIGMA</a></p>
+						<p><a href="#">ABOUT US</a></p>
+						<p><a href="#">FEEDBACK</a></p>
+						<!-- <p><a href="#">ENIGMA</a></p> -->
 					</div>
 				</div>
 			</div>
@@ -228,5 +233,5 @@ else{
 	<link rel="stylesheet" type="text/css" href="styles/syle-popup.css">
 </html>
 <?php
-}
+/*}*/
 ?>
