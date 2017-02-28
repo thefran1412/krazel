@@ -83,20 +83,17 @@ li {
 }
 
 .fst-post{
-	width: 530px;
-	height: 530px;
-	margin: 5px;
+	width: 520px;
+	height: 520px;
 }
 .snd-post{
 	background-color: white;
-	width: 530px;
-	height: 260px;
-	margin: 5px;
+	width: 520px;
+	height: 250px;
 }
 .page-post{
-	width: 260px;
-	height: 260px;
-	margin: 5px;
+	width: 250px;
+	height: 250px;
 }
 .normal-post{
 	width:200px;
@@ -179,14 +176,13 @@ li {
 	overflow: hidden;
 }
 #search{
-	margin: 5px;
-	width: 1070px;
+	margin: 10px;
+	width: 1060px;
 	height: 60px;
 	background-color: white;
 	box-shadow: 0 1px 8px 0 rgba(0,0,0,0.1),0 0 0 1px rgba(0,0,0,0.08);
 	margin-top: 20px;
 	border-radius: 4px;
-	margin-bottom: 20px;
 }
 #search input{
 	border: 0;
