@@ -81,18 +81,31 @@ else{*/
 			</div>
 		</div>
 		<div id="body">
-			<div id="sorting">
-				<div id="search"></div>
+			<!-- <div id="sorting"> -->
 				<!-- <div class="filters" style="margin-right: 5px;"></div>
 				<div class="filters"></div> -->
-			</div>
-			<div id="categories">
+			<!-- </div> -->
+			<!-- <div id="categories"> -->
 				<!-- <h2>CATEGORIES</h2> -->
 				<?php 
-					$categories->getCategories();
+					//$categories->getCategories();
 				?>
-			</div>
+			<!-- </div> -->
 			<div id="content">
+				<div id="search">
+					<img class="searchicon" src="images/search.png">
+					<input type="text" name="search">
+					<button class="filters sel_cat">Category</button>
+					<button class="filters sel_loc">Location</button>
+					<select class="filters sel_type">
+						<option value="everything" default>Everything</option>
+						<option value="products">Products</option>
+						<option value="services">Services</option>
+						<option value="brands">Brands</option>
+						<option value="shops">Shops</option>
+						<option value="people">People</option>
+					</select>
+				</div>
 				<div id="cont_square">
 					
 				</div>
@@ -104,6 +117,7 @@ else{*/
 			</div>
 			<div id="ranking">
 				<!-- <h2>RANKING</h2> -->
+				<img id="ranktype" src="images/trending.png">
 				<?php
 					$squares->getRanking();
 				?>

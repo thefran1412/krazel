@@ -254,7 +254,7 @@ class Square extends dataBase{
 			FROM squares s, payments p, users u
 			WHERE s.id_square = p.id_square AND s.id_user = u.id_user
 			GROUP BY s.title, s.image, u.username
-			ORDER BY suma desc LIMIT 10';
+			ORDER BY suma desc LIMIT 15';
 		$result = $this->getData($sql);
 		$count = 1;
 		echo '<ul>';
