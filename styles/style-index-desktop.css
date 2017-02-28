@@ -171,7 +171,24 @@ li {
 	margin-bottom: 8px;
 	overflow: hidden;
 }
-
+#search{
+	width: 100%;
+	height: 60px;
+	background-color: white;
+	box-shadow: 0 1px 8px 0 rgba(0,0,0,0.1),0 0 0 1px rgba(0,0,0,0.08);
+	margin-top: 20px;
+	border-radius: 4px;
+	margin-bottom: 20px;
+}
+.filters{
+	width: 49.6%;
+	height: 45px;
+	background-color: white;
+	box-shadow: 0 1px 8px 0 rgba(0,0,0,0.1),0 0 0 1px rgba(0,0,0,0.08);
+	margin-top: 10px;
+	border-radius: 4px;
+	display: inline-block;
+}
 
 
 

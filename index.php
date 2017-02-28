@@ -81,6 +81,11 @@ else{*/
 			</div>
 		</div>
 		<div id="body">
+			<div id="sorting">
+				<div id="search"></div>
+				<!-- <div class="filters" style="margin-right: 5px;"></div>
+				<div class="filters"></div> -->
+			</div>
 			<div id="categories">
 				<!-- <h2>CATEGORIES</h2> -->
 				<?php 
