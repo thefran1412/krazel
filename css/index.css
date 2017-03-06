@@ -1,0 +1,192 @@
+/*GENERAL: START*/
+
+#body{
+	display: block;
+	width: 1140px;
+	margin: 0 auto;
+}
+
+/*GENERAL: END*/
+
+/*RANKING: START*/
+
+.fst-rank, .snd-rank, .trd-rank, .rank{
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	overflow: hidden;
+	float: left;
+	display: block;
+}
+.fst-rank p, .snd-rank p, .trd-rank p, .rank p{
+	position: relative;
+	top: -40px;
+	left: 7px;
+	display: inline-block;
+	text-shadow: 0.5px 0.5px 1px black;
+	color: white;
+}
+.fst-rank img, .snd-rank img, .trd-rank img, .rank img{
+	width: 40px;
+	height: 40px;
+	position: relative;
+    top: -6px;
+    left: -6px;
+	filter: brightness(90%) blur(5px);
+}
+.fst-rank {
+	border: 5px solid #d4af37;
+}
+.snd-rank {
+	border: 5px solid #c0c0c0;
+}
+.trd-rank {
+	border: 5px solid #cd7f32;
+}
+.rank {
+	border: 2px solid black;
+}
+.name-rank{
+	line-height: 37px;
+	vertical-align: middle;
+}
+.username{
+	padding: 0 0 0 20px;
+}
+.price{
+	padding: 0 0 0 10px;
+	float: right;
+}
+.name-rank{
+	width: 100%;
+}
+.name-rank p {
+	display: inline-block;
+}
+
+#ranking li {
+	height: 40px;
+	margin-bottom: 8px;
+	overflow: hidden;
+}
+
+#ranktype{
+	margin: 20px 0;
+	height: 50px; 
+}
+
+#ranking{
+	width: 50px;
+	float: right;
+	line-height: 29px;
+}
+
+/*RANKING: END*/
+
+#ranking, #content{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/*CONTENT: START*/
+#content{
+	width: 1090px;
+	text-align: center;
+}
+#search{
+	margin: 10px;
+	width: 1060px;
+	height: 50px;
+	background-color: white;
+	box-shadow: 0 1px 8px 0 rgba(0,0,0,0.1),0 0 0 1px rgba(0,0,0,0.08);
+	margin-top: 20px;
+	border-radius: 4px;
+}
+#search input{
+	border: 0;
+	float: left;
+	width: 72%;
+	height: 100%;
+}
+.searchicon{
+	float: left;
+	height: 25px;
+	margin-top: 13px;
+	margin-left: 16px;
+}
+.filters{
+	margin-top: 8px;
+	height: 35px;
+	float: right;
+	margin-right: 10px;
+	border-radius: 3px;
+	background-color: white;
+	border: solid 1px grey;
+}
+
+/*CONTENT: END*/
+
+/*POSTS: START*/
+.fst-post, .snd-post, .page-post, .normal-post{
+	margin: 10px;
+	float: left;
+	border-radius: 5px;
+	background-color: #E79E85;
+	/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+	box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2),0 0 0 1px rgba(0,0,0,0.08);
+	overflow: hidden;
+}
+.fst-post h5, .snd-post h5, .page-post h5, .normal-post h5{
+	position: relative;
+	left: 5px;
+	bottom: 50%;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+.fst-post:hover h5, .snd-post:hover h5, .page-post:hover h5, .normal-post:hover h5{
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+.fst-post img, .page-post img, .normal-post img{
+	width: 100%;
+	height: 100%;
+	transition: opacity 0.5s ease;
+	border-radius: 5px;
+}
+.fst-post:hover img, .page-post:hover img, .normal-post:hover img{
+	opacity: 0;
+	transition: opacity 0.1s ease;
+	
+}
+.snd-post img{
+	width: 50%;
+	height: 100%;
+	transition: opacity 0.5s ease;
+	float: left;
+}
+
+.fst-post{
+	width: 520px;
+	height: 520px;
+}
+.snd-post{
+	background-color: white;
+	width: 520px;
+	height: 250px;
+}
+.page-post{
+	width: 250px;
+	height: 250px;
+}
+.normal-post{
+	width:200px;
+	height: 200px;
+}
+/*POST: END*/
+
+/*PAGINATION: START*/
+#pag{
+	text-align: center;
+}
+
+/*PAGINATION: END*/
