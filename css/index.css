@@ -4,6 +4,11 @@
 	display: block;
 	width: 1140px;
 	margin: 0 auto;
+	position: relative;
+}
+#cont_square{
+	display: block;
+	height: 800px;
 }
 
 /*GENERAL: END*/
@@ -79,6 +84,14 @@
 	width: 50px;
 	float: right;
 	line-height: 29px;
+	transition: width 1s ease, background-color 1s ease;
+	position: absolute;
+	right: 5px;
+	background-color: #f5f5f5;
+}
+#ranking:hover{
+	width: 200px;
+	background-color: white;
 }
 
 /*RANKING: END*/
